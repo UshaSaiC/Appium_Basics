@@ -7,7 +7,7 @@ import java.net.MalformedURLException;
 import java.net.URL;
 
 public class Base {
-    public static void main(String[] args) throws MalformedURLException {
+    public static AndroidDriver desiredCapabilities() throws MalformedURLException {
 
         // In Selenium, the process to automate -
         // Will need driver instantiated, URL (where to perform action), certain commands wrt actions and assertions
@@ -34,9 +34,11 @@ public class Base {
 
         desiredCapabilities.setCapability(MobileCapabilityType.AUTOMATION_NAME, "uiautomator2");
 
-        AndroidDriver driver = new AndroidDriver(new URL("http://127.0.0.1:4723/wd/hub"), desiredCapabilities);
+        AndroidDriver androidDriver = new AndroidDriver(new URL("http://127.0.0.1:4723/wd/hub"), desiredCapabilities);
         // driver gets activated with all the capabilities and the URL is configured as appium server listens on 4723 port
         // so that driver can route to that port;
         //wd ---> webdriver (in URL)
+
+        return androidDriver;
     }
 }
