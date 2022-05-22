@@ -1,12 +1,11 @@
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.AndroidElement;
-import org.openqa.selenium.WebElement;
 
 import java.net.MalformedURLException;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
-public class Basics extends Base{
+public class BasicSelectors extends Base{
     public static void main (String[] args) throws MalformedURLException {
         AndroidDriver androidDriver = desiredCapabilities();
 
@@ -29,12 +28,10 @@ public class Basics extends Base{
         androidDriver.findElementByXPath("//android.widget.TextView[@text='3. Preference dependencies']").click();
         // androidDriver.findElementByXPath("//android.widget.CheckBox").click(); // if tagName is unique in itself, no need of attributes in xpath
         androidDriver.findElementById("android:id/checkbox").click(); // using resource id to find the element
-        // androidDriver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
         androidDriver.findElementByXPath("(//android.widget.RelativeLayout)[2]").click(); // if particular xpath returns n elements,
         // we can enclose it in brackets followed by the index number... stating to select particular nth element not the 1 (first) default value.
         // Element index starts from 1
         // androidDriver.findElementByXPath("//android.widget.EditText").sendKeys("Usha Sai");
-        // androidDriver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
         androidDriver.findElementByClassName("android.widget.EditText").sendKeys("Usha Sai"); // finding element by className directly (FYI, className ~== tagName)
         // androidDriver.findElementByXPath("//android.widget.Button[@text='OK']").click();
         List<AndroidElement> buttonElement = androidDriver.findElementsByClassName("android.widget.Button");
