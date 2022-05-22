@@ -13,9 +13,6 @@ public class BasicSelectors extends Base{
 
         // In android, we can find elements mostly from id, className, xpath, androidUIAutomator.. remaining locators also works but aren't consistent
 
-        // CLASSNAME --> obtained directly from class attribute
-        // ID --> obtained directly from resource-id attribute
-
         // XPATH
         // all the code is written in XML, xpath can read the XML and point to specific location
         // Syntax : //tagName[@attribute='value']
