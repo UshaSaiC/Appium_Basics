@@ -3,7 +3,7 @@ import io.appium.java_client.android.AndroidDriver;
 import java.net.MalformedURLException;
 import java.util.concurrent.TimeUnit;
 
-public class UIAutomatorSelector extends Base{
+public class UIAutomatorSelectors extends Base{
     public static void main (String[] args) throws MalformedURLException {
 
         AndroidDriver androidDriver = desiredCapabilities();
