@@ -10,7 +10,7 @@ import static io.appium.java_client.touch.LongPressOptions.longPressOptions;
 import static io.appium.java_client.touch.TapOptions.tapOptions;
 import static io.appium.java_client.touch.offset.ElementOption.element;
 
-public class Gestures extends Base{
+public class TapAndLongPressGestures extends Base{
     public static void main (String[] args) throws MalformedURLException {
 
         AndroidDriver androidDriver = desiredCapabilities();
