@@ -11,7 +11,6 @@ public class ChromeBase {
 
         DesiredCapabilities chromeDesiredCapabilities = new DesiredCapabilities();
 
-        // if we want to do automation on real physical device... we just need to pass device name as Android Device
         chromeDesiredCapabilities.setCapability(MobileCapabilityType.DEVICE_NAME, "APPIUM_EMULATOR");
 
         // to run tests on chrome browser
